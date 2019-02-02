@@ -7,6 +7,7 @@
 
 package frc.robot.subsystems;
 
+import frc.robot.drive.LunatecsDrive;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
@@ -14,6 +15,8 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 
 public class DriveTrain extends Subsystem {
+
+  private LunatecsDrive drive;
 
   private WPI_VictorSPX leftFront_V = new WPI_VictorSPX(16);
   private WPI_TalonSRX leftBack_T   = new WPI_TalonSRX(15);
@@ -34,13 +37,21 @@ public class DriveTrain extends Subsystem {
 
     leftFront_V.follow(leftBack_T);
     rightBack_V.follow(rightFront_T);
+    
+    drive = new LunatecsDrive(leftBack_T, rightFront_T);
   }
 
+  //TODO Deal with rampup
+  
+  public void arcadeDrive(double speed, double rotation){
+    drive.arcadeDrive(speed, rotation, false);
+  }
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
   @Override
   public void initDefaultCommand() {
+
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }

@@ -27,4 +27,26 @@ public class RobotMap {
   public static int LEFT_TALON_CAN_ID = 3;
   public static int LEFT_VICTOR_CAN_ID = 2;
 
+  public static int RIGHT_TALON_CAN_ID = 4;
+  public static int RIGHT_VICTOR_CAN_ID = 1;
+
+  public static int CONTROLLER_USB_ID = 0;
+  //buttons for the joystick are below
+  public static int GREEN_BUTTON = 1;
+  public static int RED_BUTTON = 2;
+  public static int BLUE_BUTTON = 3;
+  public static int YELLOW_BUTTON = 4;
+
+  public static int ULTRASONIC_PING_ID = 9;
+  public static int ULTRASONIC_ECHO_ID = 8;
+
+  public static int POTENTIOMETER_ID = 3;
+  public static int POTENTIOMETER_RANGE = 1080;
+  public static int POTENTIOMETER_OFFSET = 30;
+
+  public static int INTAKE_TALON_CAN_ID = 5;
+
+  public static int LED_PWM_ID = 3;
+
+
 }

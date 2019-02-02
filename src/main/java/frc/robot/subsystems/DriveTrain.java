@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import frc.robot.drive.LunatecsDrive;
+import frc.robot.commands.DriveWithJoysticks;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
@@ -51,7 +52,7 @@ public class DriveTrain extends Subsystem {
 
   @Override
   public void initDefaultCommand() {
-
+    setDefaultCommand(new DriveWithJoysticks());
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
   }

@@ -9,6 +9,8 @@ package frc.robot.subsystems;
 
 import frc.robot.drive.LunatecsDrive;
 import frc.robot.commands.DriveWithJoysticks;
+import frc.robot.Robot;
+import frc.robot.RobotMap;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
@@ -19,11 +21,11 @@ public class DriveTrain extends Subsystem {
 
   private LunatecsDrive drive;
 
-  private WPI_VictorSPX leftFront_V = new WPI_VictorSPX(16);
-  private WPI_TalonSRX leftBack_T   = new WPI_TalonSRX(15);
+  private WPI_VictorSPX leftFront_V = new WPI_VictorSPX(RobotMap.LEFT_VICTOR_CAN_ID);
+  private WPI_TalonSRX leftBack_T   = new WPI_TalonSRX(RobotMap.LEFT_TALON_CAN_ID);
 
-  private WPI_TalonSRX rightFront_T = new WPI_TalonSRX(1);
-  private WPI_VictorSPX rightBack_V = new WPI_VictorSPX(2);
+  private WPI_TalonSRX rightFront_T = new WPI_TalonSRX(RobotMap.RIGHT_TALON_CAN_ID);
+  private WPI_VictorSPX rightBack_V = new WPI_VictorSPX(RobotMap.RIGHT_VICTOR_CAN_ID);
 
   private static NeutralMode DRIVE_NEUTRAL_MODE = NeutralMode.Brake;
 

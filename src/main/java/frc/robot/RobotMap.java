@@ -60,12 +60,27 @@ public class RobotMap {
   BUT this is just to be useful if we have a complete nuclear fallout
   with the LimeLight
 
-  Hue Upper: 80
-  Saturation Upper: 255
-  Saturation Lower: 192
-  Value Upper: 255
-  Value Lower: 201
+  --Input--
+  Exposure: 2
+  Red Balance: 1545
+  Blue Balance: 500
 
+  --Thresholding--
+  Hue: 45-62
+  Saturation: 0-255
+  Value: 149-255
+  Erosion Steps: 0
+  Dilation Steps: 1
+
+  --Contour Filtering--
+  Sort Mode: Closest
+  Area: 0.0-100.0
+  Fullness: 73.4-100.0
+  W/H Ratio: 0.3001-1.1066
+  Direction Filter: None
+  Target Grouping: Dual Target
+  Intersection Filter: Vert-Above
+  
   May need some adjustment
   */
 

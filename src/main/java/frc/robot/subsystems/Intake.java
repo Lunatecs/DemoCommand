@@ -23,7 +23,6 @@ public class Intake extends Subsystem {
   private TalonSRX intakePivot = new TalonSRX(RobotMap.INTAKE_TALON_CAN_ID);
   private AnalogInput ai = new AnalogInput(3);
   private AnalogPotentiometer potentiometer = new AnalogPotentiometer(ai, 1080, 30);
-  private double angle = potentiometer.get();
   
   //constructor
   public Intake() {

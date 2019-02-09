@@ -16,9 +16,13 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 public class Limelight extends Subsystem {
   
   private NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
+  
+  //Constructor
+  public Limelight(){
+    CameraServer.getInstance().startAutomaticCapture();
+  }
 
   //--------Getters--------
-  
   public double getTX(){
     return table.getEntry("tx").getDouble(0.0);
   }
